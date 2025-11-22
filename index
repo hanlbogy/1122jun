@@ -13,7 +13,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Malgun Gothic', sans-serif;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* 시원한 블루 그라데이션 */
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* 청소년용 시원한 블루 */
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -22,7 +22,7 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             border-radius: 20px;
             padding: 40px;
             max-width: 800px;
@@ -34,19 +34,19 @@
         }
 
         .screen { display: none; }
-        .screen.active { display: block; animation: fadeIn 0.6s; }
+        .screen.active { display: block; animation: fadeIn 0.5s; }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
             color: #0052cc;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-size: 2.2em;
-            font-weight: 900;
+            font-weight: 800;
             word-break: keep-all;
         }
 
@@ -55,12 +55,12 @@
             color: #555;
             margin-bottom: 40px;
             font-size: 1.1em;
-            line-height: 1.6;
+            line-height: 1.5;
             word-break: keep-all;
         }
 
         .input-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; color: #333; font-weight: 700; font-size: 0.9em; letter-spacing: 1px;}
+        label { display: block; margin-bottom: 8px; color: #333; font-weight: 700; font-size: 0.95em; letter-spacing: 0.5px;}
         
         input, select {
             width: 100%;
@@ -80,7 +80,7 @@
         }
 
         .btn {
-            background: linear-gradient(90deg, #3182ce 0%, #63b3ed 100%);
+            background: linear-gradient(90deg, #3182ce 0%, #00c6ff 100%);
             color: white;
             padding: 16px;
             border: none;
@@ -95,40 +95,39 @@
             letter-spacing: 1px;
         }
         
-        .btn:hover { background: linear-gradient(90deg, #2b6cb0, #4299e1); transform: translateY(-2px); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(49, 130, 206, 0.4); }
 
         .progress-bar {
-            background: #e2e8f0;
-            height: 6px;
-            border-radius: 3px;
-            margin-bottom: 40px;
+            background: #edf2f7;
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 30px;
             overflow: hidden;
         }
 
         .progress-fill {
-            background: #3182ce;
+            background: linear-gradient(90deg, #3182ce, #00c6ff);
             height: 100%;
             transition: width 0.3s;
         }
 
         .question-number {
             text-align: center;
-            color: #3182ce;
+            color: #2b6cb0;
             font-size: 1em;
             margin-bottom: 15px;
             font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .question-text {
-            font-size: 1.6em;
+            font-size: 1.5em;
             text-align: center;
             color: #1a202c;
             margin-bottom: 40px;
             line-height: 1.5;
             word-break: keep-all;
-            font-weight: 800;
+            font-weight: 700;
         }
 
         .answers {
@@ -140,14 +139,14 @@
             background: white;
             border: 1px solid #e2e8f0;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 1.05em;
             cursor: pointer;
             text-align: left;
             color: #4a5568;
             transition: all 0.2s;
             word-break: keep-all;
-            line-height: 1.5;
+            line-height: 1.4;
             font-weight: 500;
         }
 
@@ -155,6 +154,7 @@
             border-color: #3182ce;
             background: #ebf8ff;
             color: #2c5282;
+            transform: translateX(5px);
         }
 
         /* 결과 화면 */
@@ -165,38 +165,40 @@
             margin-bottom: 20px;
         }
         
-        .report-title { font-size: 1.5em; font-weight: 800; color: #2d3748; }
-        .report-subtitle { font-size: 0.9em; color: #718096; }
+        .report-title { font-size: 1.5em; font-weight: 800; color: #2d3748; word-break: keep-all; }
+        .report-subtitle { font-size: 0.9em; color: #718096; margin-top: 5px; }
 
         .report-info {
             display: flex;
-            justify-content: space-between;
-            padding: 15px 0;
-            border-bottom: 1px solid #e2e8f0;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 10px;
             margin-bottom: 30px;
             flex-wrap: wrap;
         }
 
-        .info-item { flex: 1; text-align: center; min-width: 80px; }
-        .info-label { font-size: 12px; color: #718096; text-transform: uppercase; margin-bottom: 5px; }
-        .info-value { font-size: 16px; font-weight: 700; color: #2d3748; }
+        .info-item { text-align: center; min-width: 80px; }
+        .info-label { font-size: 12px; color: #718096; text-transform: uppercase; margin-bottom: 3px; }
+        .info-value { font-size: 15px; font-weight: 700; color: #2d3748; }
 
         .result-card {
             background: linear-gradient(135deg, #0061ff 0%, #60efff 100%);
             color: white;
-            padding: 40px;
-            border-radius: 15px;
+            padding: 35px 20px;
+            border-radius: 20px;
             text-align: center;
             margin-bottom: 40px;
             box-shadow: 0 10px 25px rgba(0, 97, 255, 0.25);
         }
 
-        .result-label { font-size: 0.9em; letter-spacing: 1px; opacity: 0.9; }
+        .result-label { font-size: 0.9em; letter-spacing: 1px; opacity: 0.9; margin-bottom: 10px; }
         
         .result-type {
-            font-size: 2.8em;
-            font-weight: 900;
-            margin: 15px 0;
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-bottom: 10px;
             word-break: keep-all;
             line-height: 1.2;
         }
@@ -204,50 +206,41 @@
         .result-tags {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .tag {
             background: rgba(255,255,255,0.2);
             backdrop-filter: blur(5px);
-            padding: 5px 15px;
+            padding: 6px 12px;
             border-radius: 20px;
             font-size: 0.9em;
             border: 1px solid rgba(255,255,255,0.3);
         }
 
-        .content-section { margin-bottom: 35px; }
+        .content-section { margin-bottom: 30px; }
         
         .section-title {
-            font-size: 1.3em;
+            font-size: 1.2em;
             color: #2b6cb0;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            font-weight: 800;
+            font-weight: 700;
+            border-bottom: 2px solid #bee3f8;
+            padding-bottom: 8px;
         }
         
-        .section-title::before {
-            content: '';
-            display: inline-block;
-            width: 5px;
-            height: 20px;
-            background: #3182ce;
-            margin-right: 10px;
-            border-radius: 5px;
-        }
-
         .section-content ul { list-style: none; padding: 0; }
         .section-content li {
-            padding: 10px 0 10px 25px;
+            padding: 8px 0 8px 20px;
             position: relative;
             color: #4a5568;
             line-height: 1.6;
-            border-bottom: 1px solid #edf2f7;
+            word-break: keep-all;
         }
-        .section-content li:last-child { border-bottom: none; }
         .section-content li::before {
             content: '✔';
             position: absolute;
@@ -256,13 +249,13 @@
             font-weight: bold;
         }
 
-        .pill-container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .pill-container { display: flex; flex-wrap: wrap; gap: 8px; }
         .pill {
             background: #ebf8ff;
             color: #2c5282;
-            padding: 8px 16px;
-            border-radius: 5px;
-            font-size: 0.95em;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
             font-weight: 600;
             border: 1px solid #bee3f8;
         }
@@ -270,23 +263,25 @@
         .advice-box {
             background: #fffaf0;
             border-left: 4px solid #ed8936;
-            padding: 20px;
-            color: #744210;
+            padding: 15px;
+            color: #975a16;
             font-style: italic;
             line-height: 1.6;
-            font-size: 1.05em;
+            border-radius: 4px;
+            word-break: keep-all;
         }
 
         @media (min-width: 768px) {
             .answers { grid-template-columns: 1fr 1fr; }
             .container { padding: 50px; }
+            .result-type { font-size: 3em; }
         }
 
         @media print {
             .btn { display: none; }
-            .container { box-shadow: none; padding: 0; max-height: none; }
+            .container { box-shadow: none; padding: 0; max-height: none; overflow: visible; }
             .result-card { color: black; background: white; border: 2px solid #3182ce; }
-            .tag { color: #3182ce; background: #ebf8ff; }
+            .tag { color: #3182ce; background: #ebf8ff; border: 1px solid #3182ce; }
         }
     </style>
 </head>
@@ -294,27 +289,28 @@
     <div class="container">
         <div id="startScreen" class="screen active">
             <h1>🚀 진로 드림<br>강점 분석 (청소년용)</h1>
-            <div class="subtitle">나의 잠재력을 발견하고 미래를 설계하세요.<br>전문적인 분석을 통해 맞춤형 진로를 제안합니다.</div>
+            <div class="subtitle">나의 잠재력을 발견하고 미래를 설계하세요.<br>15개의 질문으로 알아보는 나의 강점 유형</div>
             
-            <div id="startError" style="display:none; color:#e53e3e; text-align:center; margin-bottom:15px; background:#fff5f5; padding:10px; border-radius:5px;">이름과 학년을 선택해주세요.</div>
+            <div id="startError" style="display:none; color:#e53e3e; text-align:center; margin-bottom:15px; background:#fff5f5; padding:10px; border-radius:5px; font-weight:600;">이름과 학년을 선택해주세요.</div>
 
             <div class="input-group">
                 <label>이름</label>
-                <input type="text" id="userName" placeholder="이름 입력">
+                <input type="text" id="userName" placeholder="이름을 입력하세요">
             </div>
             <div class="input-group">
                 <label>학년</label>
                 <select id="userGrade">
-                    <option value="">학년 선택</option>
+                    <option value="">학년을 선택하세요</option>
                     <option value="중학교 1학년">중학교 1학년</option>
                     <option value="중학교 2학년">중학교 2학년</option>
                     <option value="중학교 3학년">중학교 3학년</option>
                     <option value="고등학교 1학년">고등학교 1학년</option>
                     <option value="고등학교 2학년">고등학교 2학년</option>
                     <option value="고등학교 3학년">고등학교 3학년</option>
+                    <option value="기타">기타</option>
                 </select>
             </div>
-            <button class="btn" onclick="startQuiz()">Start Assessment</button>
+            <button class="btn" onclick="startQuiz()">검사 시작하기</button>
         </div>
 
         <div id="quizScreen" class="screen">
@@ -326,39 +322,39 @@
 
         <div id="resultScreen" class="screen">
             <div class="report-header">
-                <div class="report-title">CAREER STRENGTH REPORT</div>
-                <div class="report-subtitle">진로 드림 강점 분석 보고서</div>
+                <div class="report-title">진로 드림 강점 분석 보고서</div>
+                <div class="report-subtitle">Career Strength Analysis Report</div>
             </div>
 
             <div class="report-info">
-                <div class="info-item"><div class="info-label">Name</div><div class="info-value" id="resultName"></div></div>
-                <div class="info-item"><div class="info-label">Grade</div><div class="info-value" id="resultGrade"></div></div>
-                <div class="info-item"><div class="info-label">Date</div><div class="info-value" id="resultDate"></div></div>
+                <div class="info-item"><div class="info-label">이름</div><div class="info-value" id="resultName"></div></div>
+                <div class="info-item"><div class="info-label">학년</div><div class="info-value" id="resultGrade"></div></div>
+                <div class="info-item"><div class="info-label">진단일</div><div class="info-value" id="resultDate"></div></div>
             </div>
 
             <div class="result-card">
-                <div class="result-label">CORE STRENGTH TYPE</div>
+                <div class="result-label">당신의 핵심 강점 유형</div>
                 <div class="result-type" id="resultType">Type Name</div>
                 <div class="result-tags" id="resultTags"></div>
             </div>
 
             <div class="content-section">
-                <div class="section-title">주요 특성 (Characteristics)</div>
+                <div class="section-title">📌 주요 특성</div>
                 <div class="section-content"><ul id="strengthsList"></ul></div>
             </div>
 
             <div class="content-section">
-                <div class="section-title">추천 진로 및 학과 (Careers & Majors)</div>
+                <div class="section-title">🎓 추천 진로 및 학과</div>
                 <div class="section-content"><ul id="careersList"></ul></div>
             </div>
 
             <div class="content-section">
-                <div class="section-title">핵심 미래 역량 (Core Competencies)</div>
+                <div class="section-title">💡 핵심 미래 역량</div>
                 <div class="section-content pill-container" id="competencyTags"></div>
             </div>
 
             <div class="content-section">
-                <div class="section-title">진로 개발 조언 (Advice)</div>
+                <div class="section-title">🔮 진로 개발 조언</div>
                 <div class="section-content advice-box" id="adviceContent"></div>
             </div>
 
@@ -368,7 +364,7 @@
     </div>
 
     <script>
-        // 청소년용 데이터 (어휘 수준 상향 조정)
+        // 10가지 유형 데이터
         const resultData = {
             "창의적인 기획자": {
                 tags: ["#아이디어뱅크", "#상상력", "#독창성"],
@@ -428,87 +424,76 @@
             },
             "조화로운 중재자": {
                 tags: ["#평화주의", "#조율", "#글로벌마인드"],
-                strengths: ["조직의 균형과 평화를 최우선으로 생각합니다.", "다양한 의견을 경청하고 합리적으로 조율합니다.", "편견 없이 상대를 대하며 신뢰를 형성합니다."],
-                careers: ["외교관, 국제기구", "프로젝트 매니저(PM)", "노무사, 커뮤니티 매니저", "관련학과: 국제학, 사회학, 경영학"],
-                competencies: ["갈등 해결", "협상력", "문화적 감수성"],
-                advice: "\"너와 내가 '우리'가 되게 하는 힘, 그게 바로 너야. 조화로운 세상을 만들어 줘.\""
+                strengths: ["조직의 균형과 평화를 최우선으로 생각합니다.", "다양한 의견을 경청하고 합리적으로 조율합니다.",어 있다", type: "꼼꼼한 관리자"},
+                    {text: "책이나 자료들이 주제별로 분류되어 있다", type: "탐구하는 분석가"},
+                    {text: "직접 만든 소품이나 조립한 모형들이 진열되어 있다", type: "실천적인 제작자"},
+                    {text: "나만의 독특한 개성이 담긴 인테리어로 꾸며져 있다", type: "창의적인 기획자"}
+                ]
             },
-            "융합하는 혁신가": {
-                tags: ["#통섭", "#응용력", "#멀티플레이어"],
-                strengths: ["서로 다른 분야를 연결하여 새로운 가치를 창출합니다.", "다양한 분야에 호기심이 많고 습득이 빠릅니다.", "기존의 것을 비틀어 새롭게 재해석합니다."],
-                careers: ["AI 융합 전문가", "문화 콘텐츠 기획자", "컨설턴트, 미래학자", "관련학과: 융합공학, 문화콘텐츠, 자유전공"],
-                competencies: ["융합적 사고", "학습 민첩성", "창의적 해결"],
-                advice: "\"세상의 모든 지식은 너의 재료야. 경계를 넘어 새로운 가치를 만들어봐!\""
+            {
+                question: "블로그나 SNS에 글을 올린다면?",
+                answers: [
+                    {text: "정보를 요약하고 정리하여 체계적으로 올린다", type: "꼼꼼한 관리자"},
+                    {text: "정확한 팩트와 분석 내용을 담는다", type: "탐구하는 분석가"},
+                    {text: "나의 감성과 생각을 에세이처럼 표현한다", type: "표현하는 전달자"},
+                    {text: "남들과 다른 독특한 컨셉과 이미지로 꾸민다", type: "창의적인 기획자"}
+                ]
+            },
+            {
+                question: "동아리 회의 중 분위기가 어색할 때 나는?",
+                answers: [
+                    {text: "모두가 동의할 만한 합리적인 규칙을 제안한다", type: "조화로운 중재자"},
+                    {text: "문제의 원인이 무엇인지 냉철하게 파악한다", type: "탐구하는 분석가"},
+                    {text: "분위기를 부드럽게 만들기 위해 가벼운 대화를 건넨다", type: "공감하는 조력자"},
+                    {text: "서로 다른 의견을 합쳐 더 기발한 아이디어를 낸다", type: "융합하는 혁신가"}
+                ]
+            },
+            {
+                question: "체육 대회나 현장 학습 때 나는?",
+                answers: [
+                    {text: "반 친구들을 인솔하고 역할을 지시한다", type: "주도적인 실행가"},
+                    {text: "가장 효율적인 동선이나 전략을 짠다", type: "탐구하는 분석가"},
+                    {text: "뒤처지는 친구가 없는지 챙기고 응원한다", type: "공감하는 조력자"},
+                    {text: "몸을 쓰는 경기나 활동에 적극적으로 참여한다", type: "실천적인 제작자"}
+                ]
+            },
+            {
+                question: "내가 선호하는 동아리 활동은?",
+                answers: [
+                    {text: "체계적인 커리큘럼이 있는 학술 동아리", type: "꼼꼼한 관리자"},
+                    {text: "깊이 있는 탐구와 토론을 하는 연구 동아리", type: "탐구하는 분석가"},
+                    {text: "선후배 사이가 좋고 친목이 활발한 동아리", type: "조화로운 중재자"},
+                    {text: "직접 로봇을 만들거나 실험을 하는 메이커 동아리", type: "실천적인 제작자"}
+                ]
+            },
+            {
+                question: "과제를 제출하기 직전, 가장 신경 쓰는 것은?",
+                answers: [
+                    {text: "완벽한 마무리인지 검토하는 것", type: "꼼꼼한 관리자"},
+                    {text: "내 생각과 주장이 설득력 있게 전달되었는지", type: "표현하는 전달자"},
+                    {text: "남들과 차별화된 독창적인 아이디어가 있는지", type: "창의적인 기획자"},
+                    {text: "마감 기한 내에 효율적으로 끝냈는지", type: "주도적인 실행가"}
+                ]
+            },
+            {
+                question: "내가 관심 있는 분야를 친구에게 소개할 때?",
+                answers: [
+                    {text: "3단논법으로 나누어 체계적으로 설명한다", type: "꼼꼼한 관리자"},
+                    {text: "전문적인 지식과 원리를 상세하게 설명한다", type: "탐구하는 분석가"},
+                    {text: "친구가 흥미를 가질만한 재미있는 에피소드로 말한다", type: "표현하는 전달자"},
+                    {text: "남들은 잘 모르는 새롭고 충격적인 사실을 말한다", type: "도전하는 개척가"}
+                ]
+            },
+            {
+                question: "팀 프로젝트에서 의견이 갈릴 때 나는?",
+                answers: [
+                    {text: "내 주장을 논리정연하게 발표하여 설득한다", type: "표현하는 전달자"},
+                    {text: "상대방 주장의 오류를 짚어낸다", type: "탐구하는 분석가"},
+                    {text: "상대방의 기분을 상하지 않게 배려하며 조율한다", type: "조화로운 중재자"},
+                    {text: "두 의견의 장점을 합쳐 시너지를 낼 방법을 찾는다", type: "융합하는 혁신가"}
+                ]
             }
-        };
-
-        // 20문항 (유형별 매핑)
-        const quizData = [
-            { q: "수행평가 조별 과제 시작! 나의 역할은?", a: [
-                {t: "전체 일정과 역할 분담 계획 수립", type: "꼼꼼한 관리자"},
-                {t: "자료 조사 및 근거 데이터 확보", type: "탐구하는 분석가"},
-                {t: "팀원 의견 조율 및 분위기 메이커", type: "조화로운 중재자"},
-                {t: "주제 선정 및 핵심 과제 즉시 실행", type: "주도적인 실행가"}
-            ]},
-            { q: "시험 기간, 나만의 공부 스타일은?", a: [
-                {t: "원리를 완벽히 이해할 때까지 파고든다", type: "탐구하는 분석가"},
-                {t: "친구에게 설명하듯이 말하며 외운다", type: "표현하는 전달자"},
-                {t: "플래너에 분 단위로 계획을 짠다", type: "꼼꼼한 관리자"},
-                {t: "여러 과목을 연결해 폭넓게 이해한다", type: "융합하는 혁신가"}
-            ]},
-            // ... (20개 문항 패턴 반복)
-            { q: "학교 축제 때 맡고 싶은 역할은?", a: [
-                {t: "축제 홍보 영상/포스터 기획", type: "창의적인 기획자"},
-                {t: "예산 관리 및 물품 체크", type: "꼼꼼한 관리자"},
-                {t: "무대 사회(MC) 또는 공연", type: "표현하는 전달자"},
-                {t: "조명/음향 장비 설치 및 조작", type: "실천적인 제작자"}
-            ]},
-            { q: "친구와 의견 충돌 시 나의 대처는?", a: [
-                {t: "객관적 사실과 논리로 설득한다", type: "탐구하는 분석가"},
-                {t: "서로 양보하여 절충안을 찾는다", type: "조화로운 중재자"},
-                {t: "감정을 살피고 공감하며 대화한다", type: "공감하는 조력자"},
-                {t: "아예 새로운 제3의 대안을 낸다", type: "융합하는 혁신가"}
-            ]},
-            { q: "미래의 내 직업을 상상한다면?", a: [
-                {t: "안정적이고 체계적인 전문직", type: "꼼꼼한 관리자"},
-                {t: "조직을 이끄는 리더/CEO", type: "주도적인 실행가"},
-                {t: "사람을 돕고 치유하는 직업", type: "공감하는 조력자"},
-                {t: "미지의 분야를 개척하는 모험가", type: "도전하는 개척가"}
-            ]},
-            { q: "갑자기 자유 시간이 생겼다면?", a: [
-                {t: "밀린 할 일을 체크하고 정리한다", type: "꼼꼼한 관리자"},
-                {t: "관심 분야 다큐나 책을 본다", type: "탐구하는 분석가"},
-                {t: "친구들과 고민 상담을 한다", type: "공감하는 조력자"},
-                {t: "무작정 낯선 곳으로 여행을 간다", type: "도전하는 개척가"}
-            ]},
-            { q: "친구가 시험을 망쳐 우울해한다.", a: [
-                {t: "다음 시험 전략을 같이 짜준다", type: "주도적인 실행가"},
-                {t: "오답 원인을 분석해준다", type: "탐구하는 분석가"},
-                {t: "따뜻하게 위로하고 맛있는 걸 사준다", type: "공감하는 조력자"},
-                {t: "재미있는 이야기로 웃게 해준다", type: "표현하는 전달자"}
-            ]},
-            { q: "내 책상 위의 풍경은?", a: [
-                {t: "라벨링 되어 정돈된 상태", type: "꼼꼼한 관리자"},
-                {t: "주제별로 분류된 자료들", type: "탐구하는 분석가"},
-                {t: "직접 만든 조립 모형들", type: "실천적인 제작자"},
-                {t: "개성 넘치는 소품으로 꾸민 상태", type: "창의적인 기획자"}
-            ]},
-            { q: "SNS를 한다면 어떤 스타일?", a: [
-                {t: "정보를 요약/정리한 카드뉴스", type: "꼼꼼한 관리자"},
-                {t: "심도 있는 분석글", type: "탐구하는 분석가"},
-                {t: "감성적인 에세이와 일상", type: "표현하는 전달자"},
-                {t: "독특한 컨셉의 아트워크", type: "창의적인 기획자"}
-            ]},
-            { q: "동아리 회의 분위기가 썰렁할 때?", a: [
-                {t: "합리적인 규칙을 제안한다", type: "조화로운 중재자"},
-                {t: "문제 원인을 파악한다", type: "탐구하는 분석가"},
-                {t: "가벼운 스몰토크로 분위기를 푼다", type: "공감하는 조력자"},
-                {t: "기발한 아이디어로 활력을 준다", type: "융합하는 혁신가"}
-            ]}
         ];
-        
-        // 문항수 확보를 위한 더미 확장 (실제로는 위 패턴으로 20개 채움)
-        const finalQuizData = [...quizData, ...quizData];
 
         let currentQ = 0;
         let scores = {};
@@ -520,7 +505,20 @@
                 document.getElementById('startError').style.display = 'block';
                 return;
             }
-            for(let key in resultData) scores[key] = 0;
+            
+            // 점수 초기화
+            scores = {
+                "창의적인 기획자": 0,
+                "탐구하는 분석가": 0,
+                "공감하는 조력자": 0,
+                "주도적인 실행가": 0,
+                "실천적인 제작자": 0,
+                "꼼꼼한 관리자": 0,
+                "표현하는 전달자": 0,
+                "도전하는 개척가": 0,
+                "조화로운 중재자": 0,
+                "융합하는 혁신가": 0
+            };
             
             document.getElementById('startScreen').classList.remove('active');
             document.getElementById('quizScreen').classList.add('active');
@@ -528,18 +526,18 @@
         }
 
         function showQuestion() {
-            const q = finalQuizData[currentQ];
-            document.getElementById('progressFill').style.width = ((currentQ+1)/finalQuizData.length*100) + '%';
-            document.getElementById('questionNumber').innerText = 'QUESTION ' + (currentQ+1);
-            document.getElementById('questionText').innerText = q.q;
+            const q = quizData[currentQ];
+            document.getElementById('progressFill').style.width = ((currentQ+1)/quizData.length*100) + '%';
+            document.getElementById('questionNumber').innerText = 'QUESTION ' + (currentQ+1) + ' / ' + quizData.length;
+            document.getElementById('questionText').innerText = q.question;
             
             const container = document.getElementById('answersContainer');
             container.innerHTML = '';
             
-            q.a.forEach(ans => {
+            q.answers.forEach(ans => {
                 const btn = document.createElement('button');
                 btn.className = 'answer-btn';
-                btn.innerText = ans.t;
+                btn.innerText = ans.text;
                 btn.onclick = () => {
                     scores[ans.type]++;
                     nextQuestion();
@@ -549,7 +547,7 @@
         }
 
         function nextQuestion() {
-            if(currentQ < finalQuizData.length - 1) {
+            if(currentQ < quizData.length - 1) {
                 currentQ++;
                 showQuestion();
             } else {
@@ -560,6 +558,8 @@
         function showResult() {
             let max = -1;
             let type = '';
+            
+            // 동점자 처리 로직 (단순화: 먼저 발견된 유형)
             for(let key in scores) {
                 if(scores[key] > max) {
                     max = scores[key];
@@ -570,7 +570,8 @@
             const info = resultData[type];
             document.getElementById('resultName').innerText = document.getElementById('userName').value;
             document.getElementById('resultGrade').innerText = document.getElementById('userGrade').value;
-            document.getElementById('resultDate').innerText = new Date().toLocaleDateString();
+            const date = new Date();
+            document.getElementById('resultDate').innerText = `${date.getFullYear()}.${date.getMonth()+1}.${date.getDate()}`;
             
             document.getElementById('resultType').innerText = type;
 
@@ -610,6 +611,12 @@
             document.getElementById('quizScreen').classList.remove('active');
             document.getElementById('resultScreen').classList.add('active');
         }
+        
+        // 모바일 브라우저 주소창 크기 대응
+        window.addEventListener('resize', () => {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
     </script>
 </body>
 </html>
